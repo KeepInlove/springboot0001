@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.CartMapper">
+    <!-- 定义一个连表查询方法，查询购物车信息以及商品信息 -->
+    <select id="selectCartRespPage" resultMap="CartRespMap">
+        SELECT
+            c.id as cart_id,
+            c.user_id,
+            c.goods_id,
+            c.create_time,
+            c.status,
+            c.num,
+            g.id as goods_id,
+            g.goods_name,
+            g.stock_num,
+            g.img,
+            g.des,
+            g.create_time as goods_create_time,
+            g.status as goods_status,
+            g.check_status,
+            g.stock_out_num,
+            g.price
+        FROM
+            cart c
+                LEFT JOIN
+            goods g
+            ON
+                c.goods_id = g.id
+        WHERE
+            c.user_id = #{userId}
+         LIMIT #{pageNum}, #{pageSize}
+    </select>
+
+    <!-- 定义结果映射 -->
+    <resultMap id="CartRespMap" type="com.example.springboot.controller.resp.CartResp">
+        <id property="id" column="cart_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="goodsId" column="goods_id"/>
+        <result property="num" column="num"/>
+        <result property="goodsName" column="goods_name"/>
+        <result property="img" column="img"/>
+        <result property="price" column="price"/>
+    </resultMap>
+
+</mapper>

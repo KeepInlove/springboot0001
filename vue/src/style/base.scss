@@ -1,0 +1,25 @@
+$color-primary: #366ef4;
+$color-success: #2ba471;
+$color-warning: #e37318;
+$color-error: #d54941;
+$color-info: #c5c5c5;
+
+:root {
+  --color-primary: #366ef4;
+  --color-success: #2ba471;
+  --color-warning: #e37318;
+  --color-error: #d54941;
+  --color-info: #c5c5c5;
+
+  --color-background-1: #f4f7fc;
+  --color-background-2: #ffffff;
+  --color-background-3: #f1f1f1;
+  --color-font-1: rgba(0, 0, 0, 0.88);
+  --color-font-2: rgba(0, 0, 0, 0.45);
+
+  --color-text-primary: #4f5379; // 标题色
+  --color-text-regular: #666; // 正文颜色
+  --color-text-secondary: #8896af; // 筛选项颜色
+  --color-text-placeholder: #c1c1c1; // 占位符颜色
+  --color-text-disabled: #8896af; // 文本禁用颜色
+}

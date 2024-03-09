@@ -1,0 +1,151 @@
+@use './normalize.scss';
+@use './base.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: var(--color-bg-1);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  font-family: PingFang SC, Arial, Helvetica Neue;
+  font-size: 14px;
+}
+
+.theme1 {
+  --color-primary: rgb(24, 144, 255);
+  --font-color-primary: rgb(24, 144, 255);
+  --back-color-primary: rgb(24, 144, 255, 0.1);
+}
+.theme2 {
+  --color-primary: rgb(245, 34, 45);
+  --font-color-primary: rgb(245, 34, 45);
+  --back-color-primary: rgb(245, 34, 45, 0.1);
+}
+.theme3 {
+  --color-primary: rgb(250, 84, 28);
+  --font-color-primary: rgb(250, 84, 28);
+  --back-color-primary: rgb(250, 84, 28, 0.1);
+}
+.theme4 {
+  --color-primary: rgb(250, 173, 20);
+  --font-color-primary: rgb(250, 173, 20);
+  --back-color-primary: rgb(250, 173, 20, 0.1);
+}
+.theme5 {
+  --color-primary: rgb(19, 194, 194);
+  --font-color-primary: rgb(19, 194, 194);
+  --back-color-primary: rgb(19, 194, 194, 0.1);
+}
+.theme6 {
+  --color-primary: rgb(82, 196, 26);
+  --font-color-primary: rgb(82, 196, 26);
+  --back-color-primary: rgb(82, 196, 26, 0.1);
+}
+.theme7 {
+  --color-primary: rgb(47, 84, 235);
+  --font-color-primary: rgb(47, 84, 235);
+  --back-color-primary: rgb(47, 84, 235, 0.1);
+}
+.theme8 {
+  --color-primary: rgb(114, 46, 209);
+  --font-color-primary: rgb(114, 46, 209);
+  --back-color-primary: rgb(114, 46, 209, 0.1);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(136 150 175 / 40%);
+  border-radius: 6px;
+}
+
+/** custom start */
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-success {
+  color: var(--color-success);
+}
+
+.color-warning {
+  color: var(--color-warning);
+}
+
+.color-info {
+  color: var(--color-info);
+}
+
+.color-error {
+  color: var(--color-error);
+}
+
+.overflow-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.pd-10 {
+  padding: 10px 0;
+}
+.m-10 {
+  margin: 10px 0;
+}
+
+.el-tooltip__popper {
+  max-width: 800px;
+}
+
+.w1500 {
+  width: 1500px;
+  margin: 0 auto;
+}
+
+.w1300 {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/** custom end */
