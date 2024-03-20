@@ -157,6 +157,7 @@ export default {
       this.form.username = this.username;
       this.form.phone = this.form.phone;
       this.form.petsId = this.id;
+      this.form.userId=this.user.id
       this.request.post("/orders", this.form).then(res => {
         if (res.code === '200') {
           this.$message.success("保存成功")
